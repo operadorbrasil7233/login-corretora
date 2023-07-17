@@ -1,0 +1,120 @@
+
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0047ab;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #333;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: #0047ab;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00377f;
+}
+
+#tela-usuario {
+    display: none;
+}
+
+#tela-usuario h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#saldo {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#investimentos {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#grafico-investimentos {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#tempo-restante {
+    font-weight: bold;
+    color: #f00;
+}
+```
+
+Esse código CSS irá aplicar um estilo bonito ao layout bancário, com cores harmoniosas, espaçamento adequado, bordas, sombras e outros elementos visuais.
+
+Você pode adicionar esse código CSS ao seu arquivo HTML, inserindo-o na tag `<style>` dentro da tag `<head>`. Lembre-se de adicionar a tag `<style>` logo abaixo da tag `<title>`:
+
+```html
+<style>
+    /* Código CSS aqui */
+</style>
+```
+
+Espero que isso atenda às suas expectativas e ajude a criar um layout bonito para o seu aplicativo bancário!
