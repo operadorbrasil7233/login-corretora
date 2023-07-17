@@ -1,4 +1,5 @@
 
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,64 +24,24 @@
         </form>
     </main>
     <script>
-        // Tempo limite para login (em segundos)
-        var TEMPO_LIMITE_LOGIN = 120;
-        var tempoRestante = TEMPO_LIMITE_LOGIN;
-        var cronometro;
-        
-        function verificarLogin() {
-            var usernameInput = document.getElementById('username');
-            var passwordInput = document.getElementById('password');
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
             
-            var username = usernameInput.value;
-            var password = passwordInput.value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
             
-            // Verifica se os campos estão preenchidos
-            if (username === '' || password === '') {
-                alert('Por favor, preencha todos os campos!');
-                return;
-            }
-            
-            // Simula uma autenticação de login
-            // Verifica se o usuário e a senha são válidos
+            // Verifica as credenciais do usuário
             if (username === 'admin' && password === 'admin123') {
-                alert('Login bem-sucedido!');
+                window.location.href = 'pagina-inicial.html'; // Redireciona para a página inicial
             } else {
                 alert('Usuário ou senha incorretos!');
             }
-        }
-        
-        function iniciarTempoLimite() {
-            cronometro = setInterval(function() {
-                tempoRestante--;
-                console.log('Tempo restante: ' + tempoRestante + ' segundos');
-                
-                // Verifica se o tempo limite foi atingido
-                if (tempoRestante <= 0) {
-                    clearInterval(cronometro);
-                    alert('Tempo limite de login atingido!');
-                }
-            }, 1000);
-        }
-        
-        // Adicione o ouvinte de evento para o formulário
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-            verificarLogin(); // Chama a função verificarLogin()
         });
-        
-        // Iniciar o tempo limite ao carregar a página
-        window.addEventListener('load', iniciarTempoLimite);
     </script>
 </body>
 </html>
 ```
 
-Esse código completo inclui todas as funções:
+Nesse exemplo, ao fornecer o nome de usuário "admin" e a senha "admin123" e pressionar "Entrar", você será redirecionado para uma página chamada "pagina-inicial.html". Você pode substituir esse redirecionamento com a lógica de autenticação adequada em seu servidor backend.
 
-- `verificarLogin()`: verifica se os campos de usuário e senha estão preenchidos e simula uma autenticação de login.
-- `iniciarTempoLimite()`: inicia um cronômetro para controlar o tempo limite de login.
-- Ouvinte de evento `submit`: chama a função `verificarLogin()` quando o formulário é enviado.
-- Ouvinte de evento `load`: chama a função `iniciarTempoLimite()` quando a página é carregada.
-
-Espero que isso ajude! Se você tiver mais dúvidas, é só perguntar.
+Lembre-se de que, para uma autenticação segura e real, é necessário implementar um sistema de login robusto em seu servidor que valide as credenciais do usuário em um banco de dados. Este exemplo foi apenas uma simplificação para fins de demonstração.
