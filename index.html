@@ -1,12 +1,72 @@
 
-```html
 <!DOCTYPE html>
 <html>
 <head>
     <title>Banco XYZ</title>
-    <link rel="Stylesheet"href="Style.css">
     <style>
-        /* Estilos CSS aqui */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        form button {
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -41,8 +101,3 @@
     </script>
 </body>
 </html>
-```
-
-Nesse exemplo, ao fornecer o nome de usuário "admin" e a senha "admin123" e pressionar "Entrar", você será redirecionado para uma página chamada "pagina-inicial.html". Você pode substituir esse redirecionamento com a lógica de autenticação adequada em seu servidor backend.
-
-Lembre-se de que, para uma autenticação segura e real, é necessário implementar um sistema de login robusto em seu servidor que valide as credenciais do usuário em um banco de dados. Este exemplo foi apenas uma simplificação para fins de demonstração.
