@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Banco XYZ</title>
-    <style>
-        /* Estilos omitidos para manter o código limpo */
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Tempo limite para login (em segundos)
