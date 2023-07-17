@@ -94,6 +94,10 @@
             // Verifica as credenciais do usuário
             if (username === 'admin' && password === 'admin123') {
                 window.location.href = 'pagina-inicial.html'; // Redireciona para a página inicial
+            } else if (username === 'usuario1' && password === 'senha1') {
+                window.location.href = 'pagina-usuario1.html'; // Redireciona para a página do usuário 1
+            } else if (username === 'usuario2' && password === 'senha2') {
+                window.location.href = 'pagina-usuario2.html'; // Redireciona para a página do usuário 2
             } else {
                 alert('Usuário ou senha incorretos!');
             }
